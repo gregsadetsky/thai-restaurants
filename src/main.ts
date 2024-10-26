@@ -19,11 +19,10 @@ document.addEventListener("DOMContentLoaded", function() {
           div.innerHTML = `<span style="font-size:1.1rem;font-weight:bold">Thai Restaurants</span><br>Restaurants approved/recommended by the Thai Government.<br/>See <a href="https://github.com/gregsadetsky/thai-restaurants" target="_blank">source code</a>. See <a href="https://thaiselect.com/" target="_blank">data</a>. A project by <a href="https://greg.technology/" target="_blank">Greg Technology</a>.`;
           div.style.background = 'white'
           div.style.padding='10px'
-          // pointer-events: auto;
+          // big unlock!!
+          // https://stackoverflow.com/a/51683226
           div.style.pointerEvents = 'auto';
           return div;
-
-          // this.container.className = 'mapboxgl-ctrl my-custom-control';
         }
       }
       const control = new HeaderControl();
