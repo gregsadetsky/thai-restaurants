@@ -13,6 +13,22 @@ document.addEventListener("DOMContentLoaded", function() {
   });
 
   map.on('load', () => {
+      // attempt to load a location for the user's ip
+      // fetch from https://api.radar.io/v1/geocode/ip
+      // passing the API key as Authorization header
+      fetch('https://api.radar.io/v1/geocode/ip', {
+        headers: {
+          'Authorization': 'prj_live_pk_a4d20e65502f5467fa6b8f3692cb24e9cf493b5b'
+        }
+      }).then((response) => {
+        return response.json();
+      }).then((data) => {
+        map.flyTo({
+          center: data.address.geometry.coordinates,
+          zoom: 7
+        });
+      });
+
       map.addSource('thai', {
           type: 'geojson',
           // Use a URL for the value for the `data` property.
