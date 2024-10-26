@@ -40,7 +40,7 @@ document.addEventListener("DOMContentLoaded", function() {
           'type': 'circle',
           'source': 'thai',
           'paint': {
-              'circle-radius': 4,
+              'circle-radius': 6,
               'circle-stroke-width': 2,
               'circle-color': 'red',
               'circle-stroke-color': 'white'
