@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", function() {
       class HeaderControl {
         onAdd(map) {
           const div = document.createElement("div");
-          div.innerHTML = `<b>Thai Restaurants</b><br>Restaurants approved/recommended by the Thai Government.<br/>See <a href="https://github.com/gregsadetsky/thai-restaurants" target="_blank">source code</a>. See <a href="https://thaiselect.com/" target="_blank">data</a>.`;
+          div.innerHTML = `<span style="font-size:1.1rem;font-weight:bold">Thai Restaurants</span><br>Restaurants approved/recommended by the Thai Government.<br/>See <a href="https://github.com/gregsadetsky/thai-restaurants" target="_blank">source code</a>. See <a href="https://thaiselect.com/" target="_blank">data</a>. A project by <a href="https://greg.technology/" target="_blank">Greg Technology</a>.`;
           div.style.background = 'white'
           div.style.padding='10px'
           // pointer-events: auto;
