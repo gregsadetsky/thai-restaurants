@@ -75,7 +75,7 @@ document.addEventListener("DOMContentLoaded", function() {
           // Populate the popup and set its coordinates
           // based on the feature found.
           var popup = Radar.ui.popup({
-            html: `${feature.properties.name}<br/>${feature.properties.address}`
+            html: `<b>${feature.properties.name}</b><br/>${feature.properties.address}`
           })
               .setLngLat(feature.geometry.coordinates)
               .addTo(map);
