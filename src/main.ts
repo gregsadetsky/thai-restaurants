@@ -13,6 +13,22 @@ document.addEventListener("DOMContentLoaded", function() {
   });
 
   map.on('load', () => {
+      class HeaderControl {
+        onAdd(map) {
+          const div = document.createElement("div");
+          div.innerHTML = `<b>Thai Restaurants</b><br>Restaurants approved/recommended by the Thai Government.<br/>See <a href="https://github.com/gregsadetsky/thai-restaurants" target="_blank">source code</a>. See <a href="https://thaiselect.com/" target="_blank">data</a>.`;
+          div.style.background = 'white'
+          div.style.padding='10px'
+          // pointer-events: auto;
+          div.style.pointerEvents = 'auto';
+          return div;
+
+          // this.container.className = 'mapboxgl-ctrl my-custom-control';
+        }
+      }
+      const control = new HeaderControl();
+      map.addControl(control, "top-left");
+
       // attempt to load a location for the user's ip
       // fetch from https://api.radar.io/v1/geocode/ip
       // passing the API key as Authorization header
